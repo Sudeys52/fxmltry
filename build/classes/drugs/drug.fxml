@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: cyan;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="drugs.DrugController">
+    <stylesheets>
+        <URL value="@drug.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="357.0" layoutY="35.0" prefHeight="21.0" prefWidth="100.0" text="DRUGS" textFill="#1c0404d8" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="92.0" text="P_Name" />
+      <Label layoutX="14.0" layoutY="140.0" text="P_Category" />
+      <Label layoutX="14.0" layoutY="191.0" text="P_Quantity" />
+      <Label layoutX="14.0" layoutY="241.0" />
+      <TextField fx:id="txtpname" layoutX="89.0" layoutY="87.0" />
+      <TextField fx:id="txtpcategory" layoutX="89.0" layoutY="135.0" />
+      <TextField fx:id="txtquantity" layoutX="89.0" layoutY="176.0" />
+      <Button fx:id="updatebtn" layoutX="133.0" layoutY="326.0" mnemonicParsing="false" onAction="#update" prefWidth="100.0" style="-fx-background-color: #2673;" text="Update" />
+      <Button fx:id="deletebtn" layoutX="19.0" layoutY="421.0" mnemonicParsing="false" onAction="#delete" prefWidth="100.0" style="-fx-background-color: yellow;" text="Delete" />
+      <Button fx:id="backbtn" layoutX="143.0" layoutY="421.0" mnemonicParsing="false" onAction="#back" prefWidth="100.0" style="-fx-background-color: blue;" text="Back" />
+      <TableView fx:id="table" layoutX="249.0" layoutY="326.0" prefHeight="224.0" prefWidth="649.0">
+        <columns>
+          <TableColumn fx:id="colpname" prefWidth="199.0" text="P_Name" />
+          <TableColumn fx:id="colcategory" prefWidth="180.0" text="P_Category" />
+            <TableColumn fx:id="colquantity" prefWidth="215.0" text="P_Quantity" />
+            <TableColumn fx:id="colprice" prefWidth="52.0" />
+        </columns>
+      </TableView>
+      <Button fx:id="insertbtn" layoutX="29.0" layoutY="326.0" mnemonicParsing="false" onAction="#insert" prefWidth="100.0" style="-fx-background-color: green;" text="Insert" />
+   </children>
+</AnchorPane>

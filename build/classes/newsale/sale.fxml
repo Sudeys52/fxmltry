@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #2673;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="newsale.SaleController">
+    <stylesheets>
+        <URL value="@sale.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="305.0" layoutY="27.0" style="-fx-background-color: 00000;" text="New SALE">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="addbtn" layoutX="39.0" layoutY="295.0" mnemonicParsing="false" onAction="#add" prefWidth="130.0" text="Addtocart" />
+      <Button fx:id="backbtn" layoutX="39.0" layoutY="344.0" mnemonicParsing="false" onAction="#back" prefWidth="130.0" text="Back" />
+      <Button fx:id="exitbtn" layoutX="197.0" layoutY="344.0" mnemonicParsing="false" onAction="#exit" prefWidth="130.0" text="Exit" />
+      <Button fx:id="selectbtn" layoutX="197.0" layoutY="295.0" mnemonicParsing="false" onAction="#select" prefWidth="130.0" text="Select" />
+      <TextField fx:id="txtname" layoutX="129.0" layoutY="117.0" />
+      <TextField fx:id="txtquantity" layoutX="129.0" layoutY="177.0" />
+      <TextField fx:id="txtprice" layoutX="129.0" layoutY="235.0" />
+      <Label layoutX="47.0" layoutY="122.0" text="Name" />
+      <Label layoutX="56.0" layoutY="250.0" text="Price" />
+      <Label layoutX="47.0" layoutY="182.0" text="Quantity" />
+      <TextArea fx:id="txtarea" layoutX="358.0" layoutY="122.0" prefHeight="376.0" prefWidth="440.0" />
+   </children>
+</AnchorPane>
